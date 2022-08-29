@@ -111,5 +111,42 @@ for (let i = 0; i <= lines; i++){
 }
 console.log(result2);
 
-const stroka2 = '';
-console.log(stroka2.length);
+
+        //ФУНКЦИИ
+function firstFun(){
+    console.log('Its my first function!');
+}
+firstFun();
+
+        //ЗАДАЧА №1
+function sayHello(name){
+    let greeding = `Привет, ${name}`; 
+    return greeding;
+}
+let res = sayHello('Kate');
+console.log(res);
+
+        //ЗАДАЧА №2
+function returnNeighboringNumbers(number){
+    let arr = [number - 1, number, number + 1];
+    return arr;
+}
+let resultat = returnNeighboringNumbers(5);
+console.log(resultat);
+
+        // ЗАДАЧА №3
+ 
+function getMathResult(num1, num2){
+    let strochka = '';
+    //let newNum1 = 0; 
+    //strochka += String(num1);
+    for (let i = 2; i < num2; i++){
+        num1 = num1 + num1 * (i - 1);
+        let newNum1 = String(num1);
+        strochka += '---' + newNum1;
+       
+    }
+    return strochka;
+}
+const resUltat = getMathResult(5,3);
+console.log(resUltat);
