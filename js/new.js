@@ -79,35 +79,37 @@ for (let i = 0; i < data1.length; i++){
 }
 console.log(result1);
 
-//      *
-//     ***
-//    *****
-//   *******
-//  *********
-// ***********
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//***********
 
 const lines = 5;
 let result2 = '';
 
 for (let i = 0; i <= lines; i++){
-    for (let j = 0; j <= lines * 2 + 2; j++){
-        if( j === (lines * 2 + 2) / 2){
+    for (let j = 0; j <= lines; j++){
+        if( j === lines ){
             result2 += '*\n';
             break;
         } 
-        else if(j >= ((lines * 2 + 2) / 2 - i) && j <= ((lines * 2 + 2) / 2 + i) && j != lines * 2 + 2 / 2){
+        else if(j >= (lines - i) && j <= (lines + i)){
+            result2 += '*';
             result2 += '*';
             
         }
-        else if(j < ((lines * 2 + 2) / 2 - i)){
+        else if(j < (lines - i)){
             result2 += ' ';
         }
-        else if(j > ((lines * 2 + 2) / 2 + i)){
-            result2 += '\n';
-        }
+
         else{
             continue;
         }
     }
-    console.log(result2);
 }
+console.log(result2);
+
+const stroka2 = '';
+console.log(stroka2.length);
