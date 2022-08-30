@@ -135,18 +135,29 @@ let resultat = returnNeighboringNumbers(5);
 console.log(resultat);
 
         // ЗАДАЧА №3
- 
 function getMathResult(num1, num2){
     let strochka = '';
-    //let newNum1 = 0; 
-    //strochka += String(num1);
-    for (let i = 2; i < num2; i++){
-        num1 = num1 + num1 * (i - 1);
-        let newNum1 = String(num1);
-        strochka += '---' + newNum1;
-       
+    let oldNum1 = num1; 
+    let newNum1;
+    if(typeof(num2) != 'number' || num2 <= 0){
+        return num1;
     }
+    strochka += String(num1) + '---';
+    for (let i = 1; i <= num2 - 1; i++){
+        num1 += oldNum1;
+        newNum1 = String(num1);
+        if (i < num2 - 1){
+            strochka += newNum1;
+            strochka +='---';
+        }
+        else{
+            strochka += newNum1;
+        }    
+    } 
     return strochka;
 }
-const resUltat = getMathResult(5,3);
+const resUltat = getMathResult(5,0);
 console.log(resUltat);
+
+const st = "gegege1.54.3";
+console.log(parseInt(st));
